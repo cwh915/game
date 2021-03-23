@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR컨텐츠기초</title>
+    <style>
+        body {margin: 0; overflow: hidden;}
+    </style>
+    <script src="three.js-dev/build/three.min.js"></script>
+    <script src="three.js-dev/examples/js/libs/dat.gui.min.js"></script> 
+    <script src="three.js-dev/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+    <canvas id="three"></canvas>
+
+    <script>
+        let threeCanvas = document.querySelector('#three');
+
+        let renderer = new THREE.WebGLRenderer({ canvas: threeCanvas, antialias: true});
+        renderer.setSize( window.innerWidth, window.innerHeight );
+        renderer.setClearColor( 0xC1E4FA )
+        renderer.setAnimationLoop( animate );
+
+        let scene = new THREE.Scene();
+
+        let camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.01, 100);
+        camera.position.z=5;
+        scene.add(camera);
+
+        let geo = new THREE.BoxGeometry( 1, 1, 1 );
+        let mat = new THREE.MeshLambertMaterial( { color: 0x049EF4} );
+        let box = new THREE.Mesh( geo, mat );
+
+        scene.add(box);
+
+        let light = new THREE.DirectionalLight( 0xffffff, 1 );
+        light.position.y= 3;
+        scene.add(light);
+
+        let gui = new dat.GUI();
+        gui.add(light.position, 'x', -5, 5, 0.1);
+        gui.add(light.position, 'y', -5, 5, 0.1);
+        gui.add(light.position, 'z', -5, 5, 0.1);
+
+        let controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.target.x = 1;
+        controls.target.y = 1;
+
+        function animate( time ){
+            renderer.render( scene, camera );
+
+            controls.update();
+            box.rotation.x += 0.01;
+            box.rotation.y += 0.01;
+        }
+
+    </script>
+    
+</body>
+</html>
