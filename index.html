@@ -20,7 +20,7 @@
 
         let renderer = new THREE.WebGLRenderer({ canvas: threeCanvas, antialias: true});
         renderer.setSize( window.innerWidth, window.innerHeight );
-        renderer.setClearColor( 0xC1E4FA )
+        renderer.setClearColor( 'coral' )
         renderer.setAnimationLoop( animate );
 
         let scene = new THREE.Scene();
@@ -30,19 +30,207 @@
         scene.add(camera);
 
         let geo = new THREE.BoxGeometry( 1, 1, 1 );
-        let mat = new THREE.MeshLambertMaterial( { color: 0x049EF4} );
+        let mat = new THREE.MeshNormalMaterial( { color: 0x0027e7} );
         let box = new THREE.Mesh( geo, mat );
 
+        let geo2 = new THREE.BoxGeometry( 1, 1, 1 );
+        let mat2 = new THREE.MeshNormalMaterial( { color: 0x0027e7} );
+        let box2 = new THREE.Mesh( geo2, mat2 );
+
+        let geo3 = new THREE.BoxGeometry( 1, 1, 1 );
+        let mat3 = new THREE.MeshNormalMaterial( { color: 0x0027e7} );
+        let box3 = new THREE.Mesh( geo3, mat3 );
+
+        let geo4 = new THREE.BoxGeometry( 1, 1, 1 );
+        let mat4 = new THREE.MeshNormalMaterial( { color: 0x0027e7} );
+        let box4 = new THREE.Mesh( geo4, mat4 );
+
+        let geo5 = new THREE.BoxGeometry( 0.7, 0.7, 0.7 );
+        let mat5 = new THREE.MeshNormalMaterial( { color: 0x253cad} );
+        let box5 = new THREE.Mesh( geo5, mat5 );
+
+        let geo6 = new THREE.BoxGeometry( 0.7, 0.7, 0.7 );
+        let mat6 = new THREE.MeshNormalMaterial( { color: 0x253cad} );
+        let box6 = new THREE.Mesh( geo6, mat6 );
+
+        let geo7 = new THREE.BoxGeometry( 0.7, 0.7, 0.7 );
+        let mat7 = new THREE.MeshNormalMaterial( { color: 0x253cad} );
+        let box7 = new THREE.Mesh( geo7, mat7 );
+
+        let geo8 = new THREE.BoxGeometry( 0.7, 0.7, 0.7 );
+        let mat8 = new THREE.MeshNormalMaterial( { color: 0x253cad} );
+        let box8 = new THREE.Mesh( geo8, mat8 );
+
+        let geo9 = new THREE.BoxGeometry( 0.5, 0.5, 0.5 );
+        let mat9 = new THREE.MeshNormalMaterial( { color: 0x5161b1} );
+        let box9 = new THREE.Mesh( geo9, mat9 );
+
+        let geo10 = new THREE.BoxGeometry( 0.5, 0.5, 0.5 );
+        let mat10 = new THREE.MeshNormalMaterial( { color: 0x5161b1} );
+        let box10 = new THREE.Mesh( geo10, mat10 );
+
+        let geo11 = new THREE.BoxGeometry( 0.5, 0.5, 0.5 );
+        let mat11 = new THREE.MeshNormalMaterial( { color: 0x5161b1} );
+        let box11 = new THREE.Mesh( geo11, mat11 );
+
+        let geo12 = new THREE.BoxGeometry( 0.5, 0.5, 0.5 );
+        let mat12 = new THREE.MeshNormalMaterial( { color: 0x5161b1} );
+        let box12 = new THREE.Mesh( geo12, mat12 );
+        
+        let geo13 = new THREE.BoxGeometry( 0.3, 0.3, 0.3 );
+        let mat13 = new THREE.MeshNormalMaterial( { color: 0x8a94c2} );
+        let box13 = new THREE.Mesh( geo13, mat13 );
+
+        let geo14 = new THREE.BoxGeometry( 0.3, 0.3, 0.3 );
+        let mat14 = new THREE.MeshNormalMaterial( { color: 0x8a94c2} );
+        let box14 = new THREE.Mesh( geo14, mat14 );
+
+        let geo15 = new THREE.BoxGeometry( 0.3, 0.3, 0.3 );
+        let mat15 = new THREE.MeshNormalMaterial( { color: 0x8a94c2} );
+        let box15 = new THREE.Mesh( geo15, mat15 );
+
+        let geo16 = new THREE.BoxGeometry( 0.3, 0.3, 0.3 );
+        let mat16 = new THREE.MeshNormalMaterial( { color: 0x8a94c2} );
+        let box16 = new THREE.Mesh( geo16, mat16 );
+
+        let geo17 = new THREE.BoxGeometry( 0.3, 0.3, 0.3 );
+        let mat17 = new THREE.MeshToonMaterial( { color: 0x0027e7} );
+        let box17 = new THREE.Mesh( geo17, mat17 );
+
+        let geo18 = new THREE.BoxGeometry( 0.3, 0.3, 0.3 );
+        let mat18 = new THREE.MeshToonMaterial( { color: 0x0027e7} );
+        let box18 = new THREE.Mesh( geo18, mat18 );
+
+        let geo19 = new THREE.BoxGeometry( 0.3, 0.3, 0.3 );
+        let mat19 = new THREE.MeshToonMaterial( { color: 0x0027e7} );
+        let box19 = new THREE.Mesh( geo19, mat19 );
+
+        let geo20 = new THREE.BoxGeometry( 0.3, 0.3, 0.3 );
+        let mat20 = new THREE.MeshToonMaterial( { color: 0x0027e7} );
+        let box20 = new THREE.Mesh( geo20, mat20 );
+
+        let geo21 = new THREE.BoxGeometry( 0.5, 0.5, 0.5 );
+        let mat21 = new THREE.MeshToonMaterial( { color: 0x253cad} );
+        let box21 = new THREE.Mesh( geo21, mat21 );
+
+        let geo22 = new THREE.BoxGeometry( 0.5, 0.5, 0.5 );
+        let mat22 = new THREE.MeshToonMaterial( { color: 0x253cad} );
+        let box22 = new THREE.Mesh( geo22, mat22 );
+
+        let geo23 = new THREE.BoxGeometry( 0.5, 0.5, 0.5 );
+        let mat23 = new THREE.MeshToonMaterial( { color: 0x253cad} );
+        let box23 = new THREE.Mesh( geo23, mat23 );
+
+        let geo24 = new THREE.BoxGeometry( 0.5, 0.5, 0.5 );
+        let mat24 = new THREE.MeshToonMaterial( { color: 0x253cad} );
+        let box24 = new THREE.Mesh( geo24, mat24 );
+
+        let geo25 = new THREE.BoxGeometry( 0.7, 0.7, 0.7 );
+        let mat25 = new THREE.MeshToonMaterial( { color: 0x5161b1} );
+        let box25 = new THREE.Mesh( geo25, mat25 );
+
+        let geo26 = new THREE.BoxGeometry( 0.7, 0.7, 0.7 );
+        let mat26 = new THREE.MeshToonMaterial( { color: 0x5161b1} );
+        let box26 = new THREE.Mesh( geo26, mat26 );
+
+        let geo27 = new THREE.BoxGeometry( 0.7, 0.7, 0.7 );
+        let mat27 = new THREE.MeshToonMaterial( { color: 0x5161b1} );
+        let box27 = new THREE.Mesh( geo27, mat27 );
+
+        let geo28 = new THREE.BoxGeometry( 0.7, 0.7, 0.7 );
+        let mat28 = new THREE.MeshToonMaterial( { color: 0x5161b1} );
+        let box28 = new THREE.Mesh( geo28, mat28 );
+        
+        let geo29 = new THREE.BoxGeometry( 1, 1, 1 );
+        let mat29 = new THREE.MeshToonMaterial( { color: 0x8a94c2} );
+        let box29 = new THREE.Mesh( geo29, mat29 );
+
+        let geo30 = new THREE.BoxGeometry( 1, 1, 1 );
+        let mat30 = new THREE.MeshToonMaterial( { color: 0x8a94c2} );
+        let box30 = new THREE.Mesh( geo30, mat30 );
+
+        let geo31 = new THREE.BoxGeometry( 1, 1, 1 );
+        let mat31 = new THREE.MeshToonMaterial( { color: 0x8a94c2} );
+        let box31 = new THREE.Mesh( geo31, mat31 );
+
+        let geo32 = new THREE.BoxGeometry( 1, 1, 1 );
+        let mat32 = new THREE.MeshToonMaterial( { color: 0x8a94c2 } );
+        let box32 = new THREE.Mesh( geo32, mat32 );
+
         scene.add(box);
+        scene.add(box2);
+        scene.add(box3);
+        scene.add(box4);
+        scene.add(box5);
+        scene.add(box6);
+        scene.add(box7);
+        scene.add(box8);
+        scene.add(box9);
+        scene.add(box10);
+        scene.add(box11);
+        scene.add(box12);
+        scene.add(box13);
+        scene.add(box14);
+        scene.add(box15);
+        scene.add(box16);
+        scene.add(box17);
+        scene.add(box18);
+        scene.add(box19);
+        scene.add(box20);
+        scene.add(box21);
+        scene.add(box22);
+        scene.add(box23);
+        scene.add(box24);
+        scene.add(box25);
+        scene.add(box26);
+        scene.add(box27);
+        scene.add(box28);
+        scene.add(box29);
+        scene.add(box30);
+        scene.add(box31);
+        scene.add(box32);
 
         let light = new THREE.DirectionalLight( 0xffffff, 1 );
-        light.position.y= 3;
+        light.position.y = 3;
         scene.add(light);
 
         let gui = new dat.GUI();
         gui.add(light.position, 'x', -5, 5, 0.1);
         gui.add(light.position, 'y', -5, 5, 0.1);
         gui.add(light.position, 'z', -5, 5, 0.1);
+
+        box.position.set(0, -1.5, 0)
+        box2.position.set(0, 0, 0)
+        box3.position.set(0, 1.5, 0)
+        box4.position.set(0, 3, 0)
+        box5.position.set(1.5, -1.5, 0)
+        box6.position.set(1.5, 0, 0)
+        box7.position.set(1.5, 1.5, 0)
+        box8.position.set(1.5, 3, 0)
+        box9.position.set(2.6, -1.5, 0)
+        box10.position.set(2.6, 0, 0)
+        box11.position.set(2.6, 1.5, 0)
+        box12.position.set(2.6, 3, 0)
+        box13.position.set(3.8, -1.5, 0)
+        box14.position.set(3.8, 0, 0)
+        box15.position.set(3.8, 1.5, 0)
+        box16.position.set(3.8, 3, 0)
+        box17.position.set(0, -1.5, -3)
+        box18.position.set(0, 0, -3)
+        box19.position.set(0, 1.5, -3)
+        box20.position.set(0, 3, -3)
+        box21.position.set(1.5, -1.5, -3)
+        box22.position.set(1.5, 0, -3)
+        box23.position.set(1.5, 1.5, -3)
+        box24.position.set(1.5, 3, -3)
+        box25.position.set(2.6, -1.5, -3)
+        box26.position.set(2.6, 0, -3)
+        box27.position.set(2.6, 1.5, -3)
+        box28.position.set(2.6, 3, -3)
+        box29.position.set(3.8, -1.5, -3)
+        box30.position.set(3.8, 0, -3)
+        box31.position.set(3.8, 1.5, -3)
+        box32.position.set(3.8, 3, -3)
 
         let controls = new THREE.OrbitControls(camera, renderer.domElement);
         controls.target.x = 1;
@@ -52,8 +240,101 @@
             renderer.render( scene, camera );
 
             controls.update();
+
             box.rotation.x += 0.01;
             box.rotation.y += 0.01;
+
+            box2.rotation.x += 0.01;
+            box2.rotation.y += 0.01;
+            
+            box3.rotation.x += 0.01;
+            box3.rotation.y += 0.01;
+            
+            box4.rotation.x += 0.01;
+            box4.rotation.y += 0.01;
+            
+            box5.rotation.x += 0.01;
+            box5.rotation.y += 0.01;
+            
+            box6.rotation.x += 0.01;
+            box6.rotation.y += 0.01;
+            
+            box7.rotation.x += 0.01;
+            box7.rotation.y += 0.01;
+            
+            box8.rotation.x += 0.01;
+            box8.rotation.y += 0.01;
+            
+            box9.rotation.x += 0.01;
+            box9.rotation.y += 0.01;
+            
+            box10.rotation.x += 0.01;
+            box10.rotation.y += 0.01;
+            
+            box11.rotation.x += 0.01;
+            box11.rotation.y += 0.01;
+        
+            box12.rotation.x += 0.01;
+            box12.rotation.y += 0.01;
+            
+            box13.rotation.x += 0.01;
+            box13.rotation.y += 0.01;
+            
+            box14.rotation.x += 0.01;
+            box14.rotation.y += 0.01;
+            
+            box15.rotation.x += 0.01;
+            box15.rotation.y += 0.01;
+        
+            box16.rotation.x += 0.01;
+            box16.rotation.y += 0.01;
+            box17.rotation.x += 0.01;
+            box17.rotation.y += 0.01;
+
+            box18.rotation.x += 0.01;
+            box18.rotation.y += 0.01;
+            
+            box19.rotation.x += 0.01;
+            box19.rotation.y += 0.01;
+            
+            box20.rotation.x += 0.01;
+            box20.rotation.y += 0.01;
+            
+            box21.rotation.x += 0.01;
+            box21.rotation.y += 0.01;
+            
+            box22.rotation.x += 0.01;
+            box22.rotation.y += 0.01;
+            
+            box23.rotation.x += 0.01;
+            box23.rotation.y += 0.01;
+            
+            box24.rotation.x += 0.01;
+            box24.rotation.y += 0.01;
+            
+            box25.rotation.x += 0.01;
+            box25.rotation.y += 0.01;
+            
+            box26.rotation.x += 0.01;
+            box26.rotation.y += 0.01;
+            
+            box27.rotation.x += 0.01;
+            box27.rotation.y += 0.01;
+        
+            box28.rotation.x += 0.01;
+            box28.rotation.y += 0.01;
+            
+            box29.rotation.x += 0.01;
+            box29.rotation.y += 0.01;
+            
+            box30.rotation.x += 0.01;
+            box30.rotation.y += 0.01;
+            
+            box31.rotation.x += 0.01;
+            box31.rotation.y += 0.01;
+        
+            box32.rotation.x += 0.01;
+            box32.rotation.y += 0.01;
         }
 
     </script>
